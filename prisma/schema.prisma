@@ -6,6 +6,20 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  markdown    String
+  title       String
+  slug        String
+  description String
+}
+
+model car {
+  id   Int    @id @default(autoincrement())
+  name String
 }
