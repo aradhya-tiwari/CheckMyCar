@@ -1,7 +1,17 @@
-<script>
+<script lang="ts">
+    import MarkdownIt from "markdown-it";
+
+    let md = new MarkdownIt();
     let operation = "add";
+
+    export let data: {} | null;
+
+    console.log(data);
 </script>
 
+<div class="border-2 text-lg bg-slate-200 border-black mx-32 p-5">
+    {@html md.render(data.resp.markdown)}
+</div>
 <main style="display:flex; justify-content:center">
     <h1>Add Article</h1>
     <br /><br /><br />

@@ -1,6 +1,6 @@
 export type article = {
-    title: string,
-    description: string,
-    slug: string,
-    markdown: string
+    title: FormDataEntryValue | null,
+    description: FormDataEntryValue | null,
+    slug: FormDataEntryValue | null,
+    markdown: FormDataEntryValue | Blob | null
 }

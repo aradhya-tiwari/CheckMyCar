@@ -1,22 +1,53 @@
-<!--Header.svelte-->
-  
+<nav>
+    <div class="logo">
+        <img src="../src/img/logo.jpeg" alt="" />
+    </div>
+    <div style="position: relative; left: 3rem;">
+        <div
+            class="search"
+            style="position: relative ;margin: 2rem; top: -1rem;"
+        >
+            <input
+                type="text"
+                placeholder="Search..."
+                name="search"
+                class="searchbar"
+            />
+            <button type="submit" class="search_button"
+                ><i class="fa fa-search" /></button
+            >
+            <button type="submit" class="Sign_in">Sign-In</button>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#">Check My Car</a></li>
+                <li><a href="#">Find New Car</a></li>
+                <li><a href="#">Compare Cars</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <style>
     nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 0.75rem;
-        background-color: #2B2B2B;
-        color: #86868B;
+        background-color: #2b2b2b;
+        color: #86868b;
         height: 10rem;
     }
 
-    .logo{
+    .logo {
         position: relative;
         left: 2.5rem;
     }
 
-    .logo img{
+    .logo img {
         height: 7rem;
         width: 7rem;
     }
@@ -57,7 +88,6 @@
         background-color: hsl(0, 0%, 85%);
     }
 
-
     .nav-links {
         display: flex;
         list-style: none;
@@ -69,41 +99,18 @@
     }
 
     .nav-links li a {
-        color: #86868B;
+        color: #86868b;
         text-decoration: none;
     }
     .nav-links li a:hover {
         color: #1bbc9b;
     }
-    .Sign_in{
+    .Sign_in {
         margin-left: 18rem;
-        background-color: #1561F0;
+        background-color: #1561f0;
         color: white;
         border: solid #1561f0 1px;
         border-radius: 7px;
         font-size: small;
     }
-</style>  
-
-<nav>
-    <div class="logo">
-        <img src="../src/img/logo.jpeg" alt="">
-    </div>
-    <div style="position: relative; left: 3rem;">
-        <div class="search" style="position: relative ;margin: 2rem; top: -1rem;">
-            <input type="text" placeholder="Search..." name="search" class="searchbar">
-            <button type="submit" class="search_button"><i class="fa fa-search"></i></button>
-            <button type="submit" class="Sign_in">Sign-In</button>
-        </div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#">Check My Car</a></li>
-                <li><a href="#">Find New Car</a></li>
-                <li><a href="#">Compare Cars</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+</style>
