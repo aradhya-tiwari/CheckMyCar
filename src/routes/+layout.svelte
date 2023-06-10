@@ -7,5 +7,5 @@
 </script>
 
 <Header />
-<slot />
+<slot style="margin:none;padding:none;" />
 <Footer />

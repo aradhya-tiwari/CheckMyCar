@@ -81,15 +81,17 @@
 
     <div class="text-center mt-5">
         <p class="footer-alt mb-0 f-14">
-            Copyright © 2023, All Rights Reserved | Build with ❤ from Check My
+            Copyright © 2023, All Rights Reserved | Build with ❤️ from Check My
             Car
         </p>
     </div>
 </footer>
 
+<!--Footer.svelte bg(2B2B2B)-->
+
 <style>
     .bg-footer {
-        background-color: #2b2b2b;
+        background-color: #33383c;
         padding: 2rem 0 0.8rem;
     }
     .footer-heading {
