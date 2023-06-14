@@ -1,8 +1,13 @@
 <script>
     import Header from "../lib/components/Header.svelte";
+    import Search from "../lib/components/Search.svelte";
+    import Xyz from "../lib/components/Xyz.svelte";
     import Footer from "../lib/components/Footer.svelte";
+    
 </script>
 
-<Header />
-<slot />
-<Footer />
+<!--<Header />
+<Search />-->
+<Xyz />
+<!--<slot />
+<Footer />-->

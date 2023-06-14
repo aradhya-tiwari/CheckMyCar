@@ -94,8 +94,7 @@
         background-color: #33383c;
         padding: 2rem 0 0.8rem;
         width: 100%;
-        position: absolute;
-        bottom: 0;
+        
     }
     .footer-heading {
         letter-spacing: 0.125rem;
