@@ -3,7 +3,7 @@ import type { PageServerLoad, Actions } from './$types';
 
 
 export async function load() {
-    let resp = await getArticle({ id: 39 })
+    let resp = await getArticle({ id: 40 })
 
     return { resp }
 }
