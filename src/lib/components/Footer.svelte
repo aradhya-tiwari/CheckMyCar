@@ -1,3 +1,4 @@
+
 <footer class="section bg-footer">
     <div class="container" style="padding-left: 0rem;">
         <div class="row">
@@ -93,6 +94,8 @@
     .bg-footer {
         background-color: #33383c;
         padding: 2rem 0 0.8rem;
+        width: 100%;
+        
     }
     .footer-heading {
         letter-spacing: 0.125rem;
