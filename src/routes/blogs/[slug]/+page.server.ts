@@ -1,10 +1,7 @@
-import { marked } from 'marked'
+import { getArticle } from '$lib/server/db'
 
-marked.use({
-    headerIds: false,
-    mangle: false
-})
-
+export const prerender = true
+// export const csr = false
 // let res = marked.parse(`
 // ----
 // layout: post
@@ -16,16 +13,11 @@ marked.use({
 // `)
 // console.log(res)
 
+export function load({ params }) {
+    let res = getArticle({
+        slug: params.slug
+    })
 
-class blog {
-    constructor() {
-
-    }
-    search() {
-
-    }
-}
-export function load() {
-    return {}
+    return { res }
 }
 

@@ -9,7 +9,7 @@ async function addArticle(obj: any) {
         let response = await prisma.article.create({
             data: {
                 title: obj.title,
-                slug: obj.slug,
+                slug: (obj.slug),
                 description: obj.description,
                 markdown: mkdwnBuffer
             }
@@ -34,7 +34,12 @@ async function deleteArticle() {
     }
 }
 async function getArticle(obj: {}) {
-    let resp: {} | null
+    let resp: {
+        title: string,
+        slug: string,
+        markdown: string
+    } | null
+
     if (Object.keys(obj).length == 0) {
         resp = await prisma.article.findFirst()
     }
@@ -43,7 +48,8 @@ async function getArticle(obj: {}) {
             where: obj
         })
     }
-    resp.markdown = resp.markdown.toString()
+    if (resp !== null)
+        resp.markdown = resp.markdown.toString()
     return resp
 
 }
