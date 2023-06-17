@@ -1,6 +1,6 @@
-<nav>
+<nav class="nav">
     <div class="logo">
-        <img src="../src/img/logo.jpeg" alt="" />
+        <img src="../src/img/logo.jpeg" alt="logo" />
     </div>
     <div style="position: relative; left: 3rem;">
         <div
@@ -20,12 +20,12 @@
         </div>
         <div>
             <ul class="nav-links">
-                <li><a href="#">Check My Car</a></li>
-                <li><a href="#">Find New Car</a></li>
-                <li><a href="#">Compare Cars</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/">Check My Car</a></li>
+                <li><a href="/findnewcar">Find New Car</a></li>
+                <li><a href="/compare">Compare Cars</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -75,7 +75,7 @@
     }
 
     .search_button {
-        height: 2.18rem;
+        height: 2.20rem;
         margin-left: -4px;
         width: 4rem;
         border: solid #c8ccd0 1px;
@@ -111,6 +111,111 @@
         color: white;
         border: solid #1561f0 1px;
         border-radius: 7px;
-        font-size: small;
+    }
+
+    /*Responsive*/
+
+    @media (max-width: 1024px) {
+        .body{
+            width: 103%;
+        }
+        .logo {
+            left: 1.5rem;
+        }
+
+        .searchbar {
+            width: 20rem;
+        }
+
+        .Sign_in {
+            margin-left: 12rem;
+        }
+
+        .nav-links li {
+            margin-right: 3rem;
+        }
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+        .body{
+            width: 106%;
+        }
+        .logo {
+            left: 0rem;
+        }
+
+        .search {
+            left: -5rem;
+        }
+
+        .searchbar {
+            width: 50%;
+            transition: none;
+        }
+
+        .searchbar:hover {
+            border-color: #99a5ae;
+            box-shadow: 0 0 10px #99a5ae;
+            width: 50%;
+        }
+
+        .Sign_in {
+            margin-left: 3.5rem;
+        }
+
+        .nav-links {
+            top: -1rem;
+            left: -3rem;
+            position: relative;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #2b2b2b;
+            color: #86868b;
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+        }
+        .nav-links.open {
+            max-height: 20rem;
+        }
+
+        .nav-links li {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav-links li:last-child {
+            margin-bottom: 0;
+        }
+
+        .nav-links li a:hover {
+            color: #1bbc9b;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .nav{
+            height: 5rem;
+        }
+        .nav-links{
+            display: none;
+        }
+        .logo{
+            left: -0.5rem;
+            bottom: 1rem;
+        }
+        .logo img{
+            height: 3rem;
+            width: 3rem;
+        }
+        .searchbar{
+            display: none;
+        }
+        .search_button{
+            display: none;
+        }
+        .Sign_in{
+            font-size: x-small;
+        }
     }
 </style>

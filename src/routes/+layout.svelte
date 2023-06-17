@@ -7,10 +7,7 @@
     let arr = ["/admin", "/about"];
 </script>
 
-<!--<Header />
-<Search />
-<slot />
-<Footer />-->
 <Header />
 <slot />
+<!--<Search />-->
 <Footer />
