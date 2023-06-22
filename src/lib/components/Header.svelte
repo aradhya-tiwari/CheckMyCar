@@ -1,4 +1,4 @@
-<nav>
+<nav class="absolute opacity-90">
     <div class="logo">
         <img src="../src/img/logo.jpeg" alt="" />
     </div>
@@ -36,10 +36,11 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 0.75rem;
         background-color: #2b2b2b;
         color: #86868b;
         height: 10rem;
+        width: 100%;
+        overflow: hidden;
     }
 
     .logo {
@@ -48,13 +49,18 @@
     }
 
     .logo img {
+        border-radius: 20px;
         height: 7rem;
-        width: 7rem;
+        width: 9rem;
+        transition: 0.3s;
+    }
+    .logo img:hover {
+        scale: 1.1;
     }
 
     .searchbar {
         padding: 0.3rem;
-        width: 30rem;
+        width: 40rem;
         border: solid #c8ccd0 1px;
         border-radius: 7px 0px 0px 7px;
         -webkit-transition: box-shadow linear 0.2s;
@@ -65,13 +71,12 @@
         outline: none;
         border-color: #99a5ae;
         box-shadow: 0 0 10px #99a5ae;
-        width: 32rem;
     }
 
     .searchbar:hover {
         border-color: #99a5ae;
         box-shadow: 0 0 10px #99a5ae;
-        width: 32rem;
+        width: 42rem;
     }
 
     .search_button {
@@ -91,11 +96,11 @@
     .nav-links {
         display: flex;
         list-style: none;
-        margin: 0;
+        margin-top: -10px;
     }
 
     .nav-links li {
-        margin-right: 6rem;
+        margin-right: 5rem;
     }
 
     .nav-links li a {
@@ -106,11 +111,16 @@
         color: #1bbc9b;
     }
     .Sign_in {
-        margin-left: 18rem;
+        margin-left: 10rem;
         background-color: #1561f0;
         color: white;
         border: solid #1561f0 1px;
         border-radius: 7px;
-        font-size: small;
+        transition: 0.3s;
+        padding: 1rem 2.5rem;
+    }
+    .Sign_in:hover {
+        box-shadow: 0 0 10px #1561f0;
+        scale: 1.05;
     }
 </style>

@@ -11,6 +11,8 @@
 <Search />
 <slot />
 <Footer />-->
-<Header />
-<slot />
-<Footer />
+<main style="background-color:#2b2b2b;">
+    <Header />
+    <slot />
+    <Footer />
+</main>

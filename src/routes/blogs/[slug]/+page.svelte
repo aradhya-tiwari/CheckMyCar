@@ -2,11 +2,14 @@
     import MarkdownIt from "markdown-it";
     // import { onMount } from "svelte/types/runtime/internal/lifecycle.js";
     let md = new MarkdownIt();
-    export const ssr = true;
     export let data;
+    console.log("Hello");
     // onMount(
     //     () => (document.querySelector("main").style = "border:1px solid black")
     // );
+
+    let value = 0;
+    console.log(value);
 </script>
 
 <main id="main">
@@ -17,6 +20,7 @@
         Cannot Find Anything
     {/if}
 </main>
+<button on:click={() => value++}>{value}</button>
 
 <style>
     main {

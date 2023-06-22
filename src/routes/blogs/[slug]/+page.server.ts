@@ -16,8 +16,9 @@ export const prerender = true
 export function load({ params }) {
     let res = getArticle({
         slug: params.slug
-    })
 
+    })
+    console.log("Hello")
     return { res }
 }
 

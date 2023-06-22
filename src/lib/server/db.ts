@@ -53,5 +53,15 @@ async function getArticle(obj: {}) {
     return resp
 
 }
+async function getArticles() {
+    let resp = await prisma.article.findMany({
+        select: {
+            title: true,
+            description: true
+        }
+    })
+    console.log(resp)
+    return { resp }
+}
 // deleteArticle()
-export { addArticle, getArticle }
+export { addArticle, getArticle, getArticles }
