@@ -17,6 +17,7 @@ model Article {
   title       String
   slug        String
   description String
+  image       String
 }
 
 model car {

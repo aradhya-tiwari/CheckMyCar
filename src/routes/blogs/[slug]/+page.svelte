@@ -7,20 +7,24 @@
     // onMount(
     //     () => (document.querySelector("main").style = "border:1px solid black")
     // );
-
-    let value = 0;
-    console.log(value);
 </script>
 
-<main id="main">
+<main id="main" class="text-slate-100 py-5">
     {#if data.res !== null}
-        <h1>{data.res.title}</h1>
+        <div class="relative w-full rounded-lg mb-">
+            <img
+                src="/assets/image2.png"
+                alt=""
+                class=" bg- w-full h-full rounded-lg mb-5"
+            />
+        </div>
+        <h1 class="mb-2 text-center font-normal text-5xl">{data.res.title}</h1>
+        <p class="text-gray-400 text-center">{data.res.description}</p>
         {@html md.render(data.res.markdown)}
     {:else}
         Cannot Find Anything
     {/if}
 </main>
-<button on:click={() => value++}>{value}</button>
 
 <style>
     main {
@@ -28,12 +32,10 @@
         margin: auto;
         width: 80%;
     }
-    h1 {
-        margin-bottom: 2rem;
-    }
     :global(th) {
-        background-color: rgb(239, 239, 239);
+        background-color: rgb(44, 44, 44);
         border: 1px solid grey;
+        text-align: center;
     }
     :global(table) {
         border: 2px solid grey;
@@ -48,6 +50,6 @@
         margin: 0.5rem;
     }
     :global(tr):nth-child(even) {
-        background-color: #e4e4e4;
+        background-color: #414141;
     }
 </style>

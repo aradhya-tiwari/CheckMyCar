@@ -1,4 +1,12 @@
-<nav class="absolute opacity-90">
+<script>
+    import { page } from "$app/stores";
+    let pos = "static";
+    if ($page.url.pathname == "/") {
+        pos = "absolute";
+    }
+</script>
+
+<nav style:position={pos}>
     <div class="logo">
         <img src="../src/img/logo.jpeg" alt="" />
     </div>
@@ -41,6 +49,8 @@
         height: 10rem;
         width: 100%;
         overflow: hidden;
+        position: absolute;
+        opacity: 0.9;
     }
 
     .logo {

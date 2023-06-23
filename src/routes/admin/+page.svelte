@@ -9,13 +9,10 @@
     console.log(data);
 </script>
 
-<div class="border-2 text-lg bg-slate-200 border-black mx-32 p-5">
-    <!-- {@html md.render(data.resp.markdown)} -->
-</div>
-<main style="display:flex; justify-content:center">
-    <h1>Add Article</h1>
-    <br /><br /><br />
-    <form action="?/{operation}" method="POST">
+<main class="flex justify-center m-auto w-[80%] text-white py-5">
+    <form action="?/{operation}" method="POST" class="border p-5">
+        <h1 class="text-center">Add Article</h1>
+
         <label for="title">Title:</label><br />
         <input type="text" name="title" id="" /><br />
         <label for="slug"> Slug:</label><br />
@@ -24,6 +21,6 @@
         <input type="text" name="description" id="" /><br />
         <label for="markdown"> Markdown:</label><br />
         <textarea name="markdown" id="" cols="50" rows="10" /><br />
-        <button type="submit">Submit</button>
+        <button type="submit" class="p-2 w-full">Submit</button>
     </form>
 </main>
