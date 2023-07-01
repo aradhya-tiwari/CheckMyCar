@@ -1,5 +1,5 @@
 <footer class="section bg-footer">
-    <div class="container" style="padding-left: 0rem;">
+    <div class="container" style="padding-left: 3rem;">
         <div class="row">
             <div class="col-lg-3">
                 <div class="contact-form">
@@ -40,7 +40,7 @@
             <div class="col-lg-4">
                 <div class="contact">
                     <h6 class="footer-heading text-uppercase text-white">
-                        Contact Us
+                        Connect with Us
                     </h6>
                     <br />
                     <p class="contact-info">info@gmail.com</p>
@@ -87,14 +87,11 @@
     </div>
 </footer>
 
-<!--Footer.svelte bg(2B2B2B)-->
 
 <style>
     .bg-footer {
-        background-color: #33383c;
+        background-color: rgb(43, 43, 43);
         padding: 2rem 0 0.8rem;
-        width: 100%;
-        position: static;
     }
     .footer-heading {
         letter-spacing: 0.125rem;
@@ -171,6 +168,11 @@
         }
         .col-lg-4 {
             margin: 2rem;
+        }
+    }
+    @media (max-width: 1024px) and (min-width:769px) {
+        .col-lg-3{
+            margin-left: 6rem;
         }
     }
 </style>

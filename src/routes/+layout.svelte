@@ -11,7 +11,7 @@
 <Search />
 <slot />
 <Footer />-->
-<main style="background-color:rgba(0,0,0,0.8);">
+<main>
     <Header />
     <slot />
     <Footer />
