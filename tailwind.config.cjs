@@ -5,12 +5,10 @@ const config = {
   theme: {
     extend: {},
   },
-
-  plugins: [],
-
   corePlugins: {
     preflight: false,
-  }
+  },
+  plugins: [],
 };
 
 module.exports = config;

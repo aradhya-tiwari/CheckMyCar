@@ -1,4 +1,4 @@
-
+import { Article } from "../../../lib/models/model"
 class SvelteMBR {
 
     constructor(params, request) {
@@ -19,11 +19,18 @@ class SvelteMBR {
         }
     }
 }
-export function GET({ params, request }) {
+export  function GET({ params, request }) {
     let mbr = new SvelteMBR(params, request)
-    mbr.route("alove", (req, res) => {
-        console.log(req.url)
-        res.send({ msg: "Hello World" })
+    mbr.route("alove", async (req, res) => {
+        let resa = new Article({
+            markdown:'# hello \n  > Hey    yo\n ',
+            title:"test",
+            slug:"testi",
+            description:"A bigggggg Discription ",
+            image:"Sample Image"
+        })
+        await resa.save()
+        res.send("Done")
     })
     console.log(mbr.resp)
     return new Response(JSON.stringify(mbr.resp))
