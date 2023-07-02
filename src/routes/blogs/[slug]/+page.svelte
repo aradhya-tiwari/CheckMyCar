@@ -3,13 +3,13 @@
     // import { onMount } from "svelte/types/runtime/internal/lifecycle.js";
     let md = new MarkdownIt();
     export let data;
-    console.log(data);
+    console.log("Hello");
     // onMount(
     //     () => (document.querySelector("main").style = "border:1px solid black")
     // );
 </script>
 
-<main id="main" class="text-slate-900 py-5">
+<main id="main" class="text-slate-100 py-5">
     {#if data.res !== null}
         <div class="relative w-full rounded-lg mb-">
             <img
@@ -18,11 +18,9 @@
                 class=" bg- w-full h-full rounded-lg mb-5"
             />
         </div>
-        <h1 class="mb-2 text-center font-normal text-5xl">{data.title}</h1>
-        <p class="text-gray-900 text-center">{data.description}</p>
-        <p class = "text-black">
-            {@html md.render('# hello    Hey \n > hello')}
-        </p>
+        <h1 class="mb-2 text-center font-normal text-5xl">{data.res.title}</h1>
+        <p class="text-gray-400 text-center">{data.res.description}</p>
+        {@html md.render(data.res.markdown)}
     {:else}
         Cannot Find Anything
     {/if}
@@ -53,9 +51,5 @@
     }
     :global(tr):nth-child(even) {
         background-color: #414141;
-    }
-    :global(blockquote){
-        background-color: rgba(237, 255, 134, 0.5);
-        padding:0.1rem;
     }
 </style>
