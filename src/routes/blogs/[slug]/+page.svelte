@@ -3,7 +3,7 @@
     // import { onMount } from "svelte/types/runtime/internal/lifecycle.js";
     let md = new MarkdownIt();
     export let data;
-    console.log("Hello");
+    console.log(data);
     // onMount(
     //     () => (document.querySelector("main").style = "border:1px solid black")
     // );
@@ -18,9 +18,9 @@
                 class=" bg- w-full h-full rounded-lg mb-5"
             />
         </div>
-        <h1 class="mb-2 text-center font-normal text-5xl">{data.res.title}</h1>
-        <p class="text-gray-400 text-center">{data.res.description}</p>
-        {@html md.render(data.res.markdown)}
+        <h1 class="mb-2 text-center font-normal text-5xl">{data.title}</h1>
+        <p class="text-gray-400 text-center">{data.description}</p>
+        {@html md.render("data.markdown")}
     {:else}
         Cannot Find Anything
     {/if}
