@@ -5,7 +5,9 @@ const config = {
   theme: {
     extend: {},
   },
-
+    corePlugins: {
+    preflight: false,
+    },
   plugins: [],
 };
 
