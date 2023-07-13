@@ -33,7 +33,7 @@
 
 <style>
     .carousel-item img {
-            height: 550px;
-        width: 1440px;
+        height: 35rem;
+        width: 95rem;
     }
 </style>
