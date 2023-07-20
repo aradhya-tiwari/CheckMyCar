@@ -27,8 +27,8 @@
     display: inline-block;
   }
   .mainbox{
-    height: 19.99rem;
-    width: 19.99rem;
+    height: 19.97rem;
+    width: 19.97rem;
     background-color: rgb(217,217,217);
     margin:3rem 1rem 1rem 1rem;
     border: dashed;
@@ -43,7 +43,7 @@
   }
   .brand{
     height:4.24rem;
-    width: 19.99rem;
+    width: 19.97rem;
     margin:0rem 1rem 0rem 1rem;
     background-color: rgb(217,217,217);
     margin-bottom: .25rem;
@@ -57,7 +57,7 @@
   }
   .model{
     height:4.24rem;
-    width: 19.99rem;
+    width: 19.97rem;
     margin:0rem 1rem 0rem 1rem;
     background-color: rgb(217,217,217);
     font-size: 1.23rem;
@@ -205,19 +205,20 @@
   .dbox{
     height: 13.875rem;
   }
+  .heading{
+    margin-top: 9rem;
+  }
 }
 
 @media(max-width:500px) and (min-width:300px){
   .mainbox{
-    height: 3.63rem;
-    width: 3.63rem;
-    font-size:0.25rem ;
-    padding-bottom: 1.2rem;
+    height: 8.1rem;
+    width: 8.1rem;
+    font-size:1.25rem;
+    padding-bottom: 3.2rem;
   }
   .fa-circle-plus{
-    font-size: .5rem;
-    padding-top: 1rem;
-    padding-top: -13rem;
+    font-size: 3rem;
     margin-bottom: 1rem
   }
   .fa-chevron-left{
@@ -225,18 +226,22 @@
   }
   .brand{
     height: 1.24rem;
-    width: 3.63rem;
+    width: 8.1rem;
     gap:2rem;
     font-size: 0.5rem;
   }
   .model{
     height: 1.24rem;
-    width: 3.63rem;
+    width: 8.1rem;
     gap:2rem;
     font-size:.5rem;
   }
   .dbox{
-    height: 10.875rem;
+    height: 8.875rem;
+  }
+  .lowersection{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1.2fr ;
   }
 }
 </style>
