@@ -18,7 +18,7 @@ export function load({ params }) {
         slug: params.slug
 
     })
-    console.log("Hello")
-    return { res }  
+    console.log(res)
+    return res   
 }
 

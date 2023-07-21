@@ -79,7 +79,7 @@ async function addArticle(obj){
     }
 }
 
-await Article.deleteMany()
+// await Article.deleteMany()
 
 // export { addArticle, getArticle, getArticles, deleteArticle }
 export { getArticle, getArticles ,addArticle}
