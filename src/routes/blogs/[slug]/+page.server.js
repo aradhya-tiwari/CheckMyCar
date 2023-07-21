@@ -1,6 +1,6 @@
 import { getArticle } from '$lib/server/db'
 
-export const prerender = auto;
+export const prerender = "auto";
 // export const csr = false
 // let res = marked.parse(`
 // ----
