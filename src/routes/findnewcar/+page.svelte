@@ -1,7 +1,101 @@
 <section class="sec">
     <h4>Filters: </h4>
     <div class="filter">
-
+    <div class="filter1">
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Tata</a>
+              <a class="dropdown-item" href="#">Maruti</a>
+              <a class="dropdown-item" href="#">Hyundai</a>
+              <a class="dropdown-item" href="#">Mahindra</a>
+              <a class="dropdown-item" href="#">Honda</a>
+              <a class="dropdown-item" href="#">Ford</a>
+              <a class="dropdown-item" href="#">Toyota</a>
+              <a class="dropdown-item" href="#">Kia</a>
+              <a class="dropdown-item" href="#">Nissan</a>
+              <a class="dropdown-item" href="#">Renault</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Budget</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">1 - 5 Lakh</a>
+              <a class="dropdown-item" href="#">5 - 10 Lakh</a>
+              <a class="dropdown-item" href="#">10 - 15 Lakh</a>
+              <a class="dropdown-item" href="#">15 - 20 Lakh</a>
+              <a class="dropdown-item" href="#">20 - 35 Lakh</a>
+              <a class="dropdown-item" href="#">35 - 50 Lakh</a>
+              <a class="dropdown-item" href="#">50 - 1 Crore</a>
+              <a class="dropdown-item" href="#">Above 1 Crore</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vehical Type</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Hatchback</a>
+              <a class="dropdown-item" href="#">Sedan</a>
+              <a class="dropdown-item" href="#">SUV</a>
+              <a class="dropdown-item" href="#">MUV</a>
+              <a class="dropdown-item" href="#">Luxury</a>
+              <a class="dropdown-item" href="#">Convertible</a>
+              <a class="dropdown-item" href="#">Hybrid</a>
+              <a class="dropdown-item" href="#">Wagon</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fuel Type</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Petrol</a>
+              <a class="dropdown-item" href="#">Diesel</a>
+              <a class="dropdown-item" href="#">CNG</a>
+              <a class="dropdown-item" href="#">Hybrid</a>
+            </div>
+        </div>
+    </div>
+    <div class="filter2">
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mileage</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">1 - 5 kmpl</a>
+              <a class="dropdown-item" href="#">5 - 10 kmpl</a>
+              <a class="dropdown-item" href="#">10 - 15 kmpl</a>
+              <a class="dropdown-item" href="#">15 - 20 kmpl</a>
+              <a class="dropdown-item" href="#">Above 20 kmpl</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Seating Capacity</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">2 seater</a>
+              <a class="dropdown-item" href="#">4 seater</a>
+              <a class="dropdown-item" href="#">5 seater</a>
+              <a class="dropdown-item" href="#">7 seater</a>
+              <a class="dropdown-item" href="#">9 seater</a>
+              <a class="dropdown-item" href="#">10+ seater</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Safety Rating</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">5 star</a>
+              <a class="dropdown-item" href="#">4 star</a>
+              <a class="dropdown-item" href="#">3 star</a>
+              <a class="dropdown-item" href="#">2 star</a>
+              <a class="dropdown-item" href="#">1 star</a>
+            </div>
+        </div>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Featured</a>
+              <a class="dropdown-item" href="#">Price - low to high</a>
+              <a class="dropdown-item" href="#">Price - high to low</a>
+              <a class="dropdown-item" href="#">Avg. Customer Review</a>
+              <a class="dropdown-item" href="#">Latest Launch</a>
+            </div>
+        </div>
+    </div>
     </div>
     <div class="page">
         <div class="cars">
@@ -131,10 +225,23 @@
         display: flex;
     }
     .filter {
-        background-color: lightslategrey ; 
+        background-color: #2b2b2b ; 
         height: 10rem; 
         width: 74.3rem; 
-        margin: 3rem 0 3rem 0
+        margin: 3rem 0 3rem 0;
+    }   
+    .filter1 {
+        display: flex;
+    }
+    .filter2 {
+        display: flex;
+    }
+    #dropdownMenuLink {
+        width: 10rem;
+        margin-top: 1.75rem;
+        margin-left: 6.75rem;
+        background-color: #86868B;
+        color: black;
     }
     .car-info {
         display: flex;
@@ -211,6 +318,12 @@
         .filter {
             width: 52rem;
         }
+        #dropdownMenuLink {
+            width: 7rem;
+            margin-top: 2rem;
+            margin-left: 4.75rem;
+            font-size: x-small;
+        }
         .car-info {
             height: 12rem;
             width: 32rem;
@@ -269,6 +382,12 @@
     @media (max-width: 768px) {
         .filter {
             width: 38rem;
+        }
+        #dropdownMenuLink {
+            width: 6rem;
+            margin-top: 2rem;
+            margin-left: 2.75rem;
+            font-size: xx-small;
         }
         .car-info {
             height: 10rem;
@@ -338,12 +457,10 @@
             padding: 1rem 1rem 2rem 3rem;
         }
         .sec h4 {
-            font-size: 1rem;
+            display: none;
         }
         .filter {
-            width: 21rem;
-            height: 8rem;
-            margin: 1rem 0 2rem 0;
+            display: none;
         }
         .page {
             display: block;
@@ -375,6 +492,12 @@
     @media (max-width: 375px) {
         .sec {
             padding: 1rem 1rem 1rem 1.5rem;
+        }
+        .sec h4 {
+            display: none;
+        }
+        .filter {
+            display: none;
         }
     }
 </style>
