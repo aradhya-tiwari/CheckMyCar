@@ -1,13 +1,14 @@
 import { addArticle, getArticle } from '$lib/server/db'
 import slugify from 'slugify'
 
-let resp = {}|" "
+let resp = {} | " "
 export async function load() {
-  
+
     return { resp }
 }
 
-
+export const csr = false;
+export const prerender = true
 export const actions = {
     insert: async ({ request }) => {
         const data = await request.formData();
@@ -18,16 +19,16 @@ export const actions = {
 
 
         resp = addArticle({
-            markdown:mkdwn,
+            markdown: mkdwn,
             slug: slugify(title, {
-                        lower: true
-                    }),
-            title:title,
+                lower: true
+            }),
+            title: title,
             description: desc,
-            image:img
+            image: img
         })
         return resp
-        
+
     }
 
 } 
