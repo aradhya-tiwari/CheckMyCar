@@ -1,18 +1,19 @@
 <style>
     .box{
-        background-color: rgb(172, 170, 166);
-        height: 100vh;
+        background-color: rgb(93, 89, 89);
+        height:44rem;
     }
     .size{
         width: 100%;
         height: 14rem;  
     }
     .head{
-        background-image: url(../../img/about_bg2.jpg);
+        background-image: url(../../img/contact_bg2.jpg);
         background-repeat:no-repeat;
         background-size: cover;
         display: flex;
         align-items: center;
+        font-family: serif;
     }
     .Details{
         
@@ -45,11 +46,14 @@
     color: white;
     padding-left: 15rem;
     margin-bottom: -0.5rem;
-    margin-left: -2rem;
+    margin-left: -3rem;
+    }
+    .fa-brands,.fa-solid{
+        margin-right: 1rem;
     }
     .response{
        position: absolute;
-       background-color: rgb(11,10,10);
+       background-color: rgb(190,190,190);
        z-index: 1;
        top:50%;
        left:50%;
@@ -64,7 +68,7 @@
         margin-left: 2rem;
         margin-top: 0.5rem;
         border-bottom:1px solid silver;
-        color: azure;
+        color: rgb(21, 22, 22);
     }
     .response form{
         padding: 0 40px;
@@ -72,7 +76,7 @@
     }
     form .txt_field{
         position: relative;
-        border-bottom: 2px solid #adadad;
+        border-bottom: 2px solid #bfbebe;
         margin:30px 0;
     }
     .txt_field input{
@@ -83,17 +87,18 @@
         border: none;
         background:none;
         outline:none;
-        color: azure;
+        color: rgb(37, 41, 41);
     }
     .txt_field label{
         position: absolute;
         top:50%;
         left:50px;
-        color:#adadad;
+        color:#899094;
         transform:translate(-50%);
         font-size: 16px;
         pointer-event:none;
         transition:.5s;
+        font-weight: bold;
     }
     .txt_field span::before{
         content: '';
@@ -108,7 +113,7 @@
     .txt_field input:focus~label,
     .txt_field input:valid~label{
         top:-5px;
-        color:#2691d9;
+        color:#29363d;
     }
     .txt_field input:focus~span::before,
     .txt_field input:valid~span::before{
@@ -125,6 +130,56 @@
     input[type="submit"]:hover{
         background-color: #2691d9;
         border-color:rgb(47, 41, 37);
+    }
+    @media (max-width:1024px){
+        .con{
+        padding-left: 7rem;
+        font-size: 1.20rem;
+    }
+    .content{
+    padding-left: 8rem;
+    }
+    .response{
+        margin-left: 13rem;
+    }
+    }
+    @media(max-width:768px){
+        .con{
+        padding-left: 3rem;
+        font-size: 1.20rem;
+    }
+    .content{
+    padding-left: 4rem;
+    }
+    .response{
+        margin-left: 11rem;
+        width: 371px;
+    }
+    }
+    @media(min-width:300px) and (max-width:500px){
+        .box{
+           height: 39rem;
+        }
+        .size{
+           height: 11rem;
+        }
+        .title1{
+            font-size: 2.5rem;
+        }
+        .content ,.con{
+           display: none;
+        }
+        .Details{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(93, 89, 89);
+        }
+        .response{
+            margin-left: 0rem;
+           margin-top: 0.5rem;
+           width: 20rem;
+        }
     }
 </style>
 
