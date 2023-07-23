@@ -1,3 +1,4 @@
+
 <style>
     .box1{
         background-color: rgb(69,64,64);
@@ -37,13 +38,13 @@
     .ques{
        font-family: sans-serif;
        padding: 0rem 2rem 0.2rem 1.5rem;
-       font-size: 1rem;
+       font-size: 2rem;
        font-style: revert;
     }
     .ans{
         font-family: sans-serif;
         padding:0rem 2rem 2rem 0.5rem ;
-        font-size: .75rem;
+        font-size: 1.5rem;
         border-bottom: .1rem solid white;
         font-style: revert;
     }
