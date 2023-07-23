@@ -1,6 +1,6 @@
 import { getArticle } from '$lib/server/db'
 
-export const prerender = true
+export const prerender = "auto";
 // export const csr = false
 // let res = marked.parse(`
 // ----
@@ -18,7 +18,7 @@ export function load({ params }) {
         slug: params.slug
 
     })
-    console.log("Hello")
-    return { res }  
+    console.log(res)
+    return res
 }
 
