@@ -7,8 +7,8 @@ export async function load() {
     return { resp }
 }
 
-export const csr = false;
-export const prerender = true
+export const csr = true;
+export const prerender = false
 export const actions = {
     insert: async ({ request }) => {
         const data = await request.formData();
