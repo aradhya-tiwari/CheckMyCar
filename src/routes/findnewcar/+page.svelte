@@ -1,4 +1,16 @@
+<script>
+    import Dropdown from "../../lib/components/Dropdown.svelte";
+</script>
 <section class="sec">
+    <Dropdown >
+        <div>
+        <li class><a href='#'>Sample</a></li>
+        <li><a href='#'>Sample</a></li>
+        <li><a href='#'>Sample</a></li>
+        <li><a href='#'>Sample</a></li>
+        <li><a href='#'>Sample</a></li>
+    </div>
+    </Dropdown>
     <h4>Filters: </h4>
     <div class="filter">
     <div class="filter1">
