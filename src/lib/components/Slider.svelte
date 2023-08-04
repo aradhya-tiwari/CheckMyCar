@@ -37,3 +37,31 @@
         width: 95rem;
     }
 </style>
+
+<!-- <script>
+
+    
+
+    let imgs = import.meta.glob('$lib/assets/*.*'),image
+
+    for (let i in imgs){
+        image =i
+    }
+    console.log(image)
+    function iterateImgs(){
+    
+    }
+    setInterval(iterateImgs,1000)
+</script>
+
+
+<main class='w-full h-screen border '>
+
+
+<h1>
+
+   <img src={iterateImgs()} alt="" srcset=""> 
+</h1>  
+
+
+</main> -->

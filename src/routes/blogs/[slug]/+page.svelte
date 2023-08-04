@@ -20,7 +20,7 @@
         </div>
         <h1 class="mb-4 text-center text-5xl ">{ data.title }</h1>
         <p class="text-gray-400 font-semibold text-justify lg:w-[70%] m-auto lg:bg-yellow-200 lg:p-10 sm:w-[100%] rounded-2xl">{data.description}</p>
-        <p class="mt-10">{ @html md.render( "data.markdown" ) }</p>
+        <p class="mt-10 text-black">{ @html md.render( data.markdown ) }</p>
     <!-- {:else} -->
         <!-- Cannot Find Anything -->
     <!-- {/if} -->

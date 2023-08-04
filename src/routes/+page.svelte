@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+import Slider from "$lib/components/Slider.svelte"
+</script>
+<Slider />
+
+<br><br>
+<div class="w-full h-full lg:bg-black text-white md:bg-zinc-700  sm:bg-green-500"> Hello World</div>
+<br><br>
