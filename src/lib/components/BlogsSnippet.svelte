@@ -1,22 +1,13 @@
 <script>
     // @ts-nocheck
 
-    export let title;
-    export let description;
+    export let blogs;
 </script>
 
-<main
-    class="p-3 bg-[rgb(80,80,80)] m-3 flex rounded-xl hover:shadow-xl hover:scale-105 transition"
->
-    <div class=" w-[20%] h-40 bg-white m-3 rounded-md" />
-    <div>
-        <div class="font-normal text-4xl mb-2 text-gray-200">
-            {title}
+<main class="w-full h-auto">
+    {#each blogs as blog}
+        <div class="w-[80%] h-auto bg-[rgb(43,43,43)] rounded-lg mx-auto my-3">
+            {blog.title}
         </div>
-        <div>
-            <p class=" font-thin text-lg text-gray-200">
-                {description}
-            </p>
-        </div>
-    </div>
+    {/each}
 </main>

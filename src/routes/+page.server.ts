@@ -1,7 +1,8 @@
-// import { getArticles } from "$lib/server/db"
-// export const load = () => {
-//     let resp = getArticles()
-//     let blogs = resp
-//     // console.log(blogs)
-//     return getArticles()
-// }
+import { getArticles } from "../lib/server/db.js"
+export const ssr = false
+export const load = async () => {
+    let resp = await getArticles()
+    let str_blogs = JSON.stringify(resp)
+    let blogs = JSON.parse(str_blogs)
+    return { blogs }
+}

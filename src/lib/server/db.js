@@ -1,6 +1,6 @@
 import { Article } from '$lib/models/model'
 import mongoose, { trusted } from 'mongoose'
-import {DATABASE_URL} from '$env/static/private'
+import { DATABASE_URL } from '$env/static/private'
 
 await mongoose.connect(DATABASE_URL)
 
@@ -17,14 +17,14 @@ await mongoose.connect(DATABASE_URL)
 // image:String
 // })
 
-function check(what,obj){
-    let {markdown,title,slug,description,image} = obj
-    switch(what){
+function check(what, obj) {
+    let { markdown, title, slug, description, image } = obj
+    switch (what) {
         case "Article":
-            if(markdown||title||slug||description||image) return true
+            if (markdown || title || slug || description || image) return true
             else return false
-        
-        }
+
+    }
 }
 
 
@@ -41,19 +41,25 @@ async function getArticle(obj) {
     let res = await Article.findOne(obj)
     console.log(res)
 
-    if(res != null){
-    let { _id, markdown, title, slug, description, image, createdAt } = res
-    _id = _id.toString()
-    return { _id, markdown, title, slug, description, image, createdAt }
+    if (res != null) {
+        let { _id, markdown, title, slug, description, image, createdAt } = res
+        _id = _id.toString()
+        return { _id, markdown, title, slug, description, image, createdAt }
     }
-    else{
-        return {title:"Some Error Occured"}
+    else {
+        return { title: "Some Error Occured" }
     }
 }
 
 async function getArticles(obj) {
-    let res = await Article.find(obj)
-    return res
+    let res = await Article.find(obj).sort({ createdAt: -1 }).limit(5)
+    let blogs = [
+    ]
+    for (let i in res) {
+        blogs.push(res[i])
+    }
+    // console.log(res, blogs)
+    return blogs
 }
 
 
@@ -62,19 +68,19 @@ async function getArticles(obj) {
  * @param {"article Object"} obj 
  * @returns "response if the query was successful or not"
  */
-async function addArticle(obj){
+async function addArticle(obj) {
     let res = {}
-    if(check('Article',obj)){
-        try{
-        res = new Article(obj)
-        console.log(res)
-        res.save()
-        return "Data Inserted Into Database Succesfully 😊"
-    }catch(e){
-        return "Could not enter data into Database 😔"+e
+    if (check('Article', obj)) {
+        try {
+            res = new Article(obj)
+            console.log(res)
+            res.save()
+            return "Data Inserted Into Database Succesfully 😊"
+        } catch (e) {
+            return "Could not enter data into Database 😔" + e
+        }
     }
-    }
-    else{
+    else {
         return "Something is Missing ig 🤔"
     }
 }
@@ -82,4 +88,4 @@ async function addArticle(obj){
 // await Article.deleteMany()
 
 // export { addArticle, getArticle, getArticles, deleteArticle }
-export { getArticle, getArticles ,addArticle}
+export { getArticle, getArticles, addArticle }

@@ -1,67 +1,36 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../src/img/verna.png"  alt="1st img">
-            <div class="carousel-caption d-none d-md-block">
-                <button style="background-color: black; color: white; border-color: grey; position: relative; right: -36rem; ">More info</button>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="../src/img/curvv.png"  alt="2nd img">
-            <div class="carousel-caption d-none d-md-block">
-                <h1 style="color: black; position: relative; left: -30rem; top: -23rem">Check My Car!</h1>
-                <button style="background-color: black; color: white; border-color: grey; position: relative; right: -36rem; ">Check My Car</button>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="../src/img/fronx.png"  alt="3rd img">
-            <div class="carousel-caption d-none d-md-block">
-                <h1 style="color: black; position: relative; right: -25rem; top: -25rem">Cars Launching Next Month</h1>
-                <button style="background-color: black; color: white; border-color: grey; position: relative; right: -32rem; ">Have a Look</button>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<script>
+    import { fade } from "svelte/transition";
 
-<style>
-    .carousel-item img {
-        height: 35rem;
-        width: 95rem;
-    }
-</style>
+    let imgs = [
+        "fronx.png",
+        "curvv.png",
+        "image1.png",
+        "image2.png",
+        "verna.png",
+    ];
 
-<!-- <script>
+    let img_index = 0;
+    let style = ``;
+    setInterval(() => {
+        if (img_index >= imgs.length - 1) {
+            img_index = 0;
+        } else {
+            img_index++;
+        }
 
-    
-
-    let imgs = import.meta.glob('$lib/assets/*.*'),image
-
-    for (let i in imgs){
-        image =i
-    }
-    console.log(image)
-    function iterateImgs(){
-    
-    }
-    setInterval(iterateImgs,1000)
+        console.log(img_index);
+    }, 5000);
 </script>
 
-
-<main class='w-full h-screen border '>
-
-
-<h1>
-
-   <img src={iterateImgs()} alt="" srcset=""> 
-</h1>  
-
-
-</main> -->
+<main class="h-full w-full border-2 overflow-hidden">
+    <div class=" w-screen h-fit">
+        <img
+            transition:fade={{ duration: 300 }}
+            src={`/img/${imgs[img_index]}`}
+            alt=""
+            srcset=""
+            class="w-full h-full"
+            {style}
+        />
+    </div>
+</main>

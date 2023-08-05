@@ -1,8 +1,9 @@
 <script>
-import Slider from "$lib/components/Slider.svelte"
+    import Slider from "$lib/components/Slider.svelte";
+    import BlogsSnippet from "../lib/components/BlogsSnippet.svelte";
+    export let data;
+    console.log(data.blogs);
 </script>
-<Slider />
 
-<br><br>
-<div class="w-full h-full lg:bg-black text-white md:bg-zinc-700  sm:bg-green-500"> Hello World</div>
-<br><br>
+<Slider />
+<BlogsSnippet blogs={data.blogs} />
