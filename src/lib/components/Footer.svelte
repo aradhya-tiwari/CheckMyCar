@@ -87,7 +87,6 @@
     </div>
 </footer>
 
-
 <style>
     .bg-footer {
         background-color: rgb(43, 43, 43);
@@ -159,7 +158,7 @@
     }
 
     /* Responsive styles */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         .contact-form {
             display: grid;
         }
@@ -168,11 +167,6 @@
         }
         .col-lg-4 {
             margin: 2rem;
-        }
-    }
-    @media (max-width: 1024px) and (min-width:769px) {
-        .col-lg-3{
-            margin-left: 6rem;
         }
     }
 </style>

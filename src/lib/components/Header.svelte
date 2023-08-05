@@ -1,5 +1,13 @@
 <script>
     import { scale } from "svelte/transition";
+    let toggleMenu = false;
+
+    function toggle() {
+        console.log(toggleMenu);
+        toggleMenu = !toggleMenu;
+        return toggleMenu;
+    }
+    let style = `display:block`;
 </script>
 
 <main class="w-full flex h-20 bg-[rgb(43,43,43)] justify-between">
@@ -8,31 +16,62 @@
         src="/img/logo.jpeg"
         alt=""
         srcset=""
-        class="w-20 p-1 mx-3 rounded-full"
+        class="w-20 p-1 mx-3 rounded-full hover:scale-105"
+        style="transition:0.3s ease"
     />
-    <div class="flex grow justify-around my-auto h-1/2">
-        <ul id="nav" class="pt-2 hidden md:flex list-none text-white gap-10">
-            <li>Home</li>
-            <li>Blogs</li>
-            <li>Contact Us</li>
-            <li>Compare Car</li>
+    <div class="flex grow justify-around my-auto md:h-1/2 sm:h-auto">
+        <ul
+            id="nav"
+            class="pt-2 hidden h-auto md:flex list-none text-white gap-10"
+            class:style={toggleMenu}
+        >
+            <li><a href="/"> Home </a></li>
+            <li><a href="/blogs"> Blogs </a></li>
+            <li><a href="/contact"> Contact Us </a></li>
+            <li><a href="/compare"> Compare Car </a></li>
             <li class="hidden relative lg:block">
                 <input
                     type="text"
                     name=""
                     id=""
-                    class="my-auto rounded-full border-0 px-2 hover:w-60 hover:transition-shadow"
+                    class="my-auto rounded-full border-0 px-4 hover:scale-110 hover:transition-shadow"
+                    style="transition:0.3s ease;"
                 />
                 <i class="absolute right-0">&#128269</i>
             </li>
         </ul>
         <div id="sign" class="flex gap-10 h-2/4 text-white px-3">
-            <div class="bg-blue-800 my-auto px-4 py-2 rounded-lg">Sign Up</div>
-            <div class="bg-green-800 my-auto px-4 py-2 rounded-lg">Log In</div>
+            <div
+                class="bg-blue-800 my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
+                style="transition:0.3s ease;"
+            >
+                Sign Up
+            </div>
+            <div
+                class="bg-green-800 my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
+                style="transition:0.3s ease;"
+            >
+                Log In
+            </div>
         </div>
     </div>
-    <p class="block md:hidden my-auto text-3xl text-white px-1">☰</p>
+    <button
+        class="block md:hidden my-auto text-3xl text-white px-1"
+        on:click={() => toggle()}>☰</button
+    >
 </main>
 
 <style>
+    .toggle {
+        display: block;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: rgb(255, 242, 233);
+        font-size: large;
+        transition: 0.3s ease;
+    }
 </style>
