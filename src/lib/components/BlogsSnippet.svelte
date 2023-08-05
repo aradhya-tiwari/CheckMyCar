@@ -18,7 +18,9 @@
             />
             <div>
                 <h2 class=" font-light">
-                    {blog.title}
+                    <a href={`/blogs/${blog.slug}`}>
+                        {blog.title}
+                    </a>
                 </h2>
                 <p>
                     {blog.description.length > 100
