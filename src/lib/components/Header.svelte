@@ -19,11 +19,14 @@
         class="w-20 p-1 mx-3 rounded-full hover:scale-105"
         style="transition:0.3s ease"
     />
-    <div class="flex grow justify-around my-auto md:h-1/2 sm:h-auto">
+    <div
+        class=" hidden md:flex grow justify-around my-auto md:h-1/2 sm:h-auto"
+        class:toggle={toggleMenu}
+    >
         <ul
             id="nav"
-            class="pt-2 hidden h-auto md:flex list-none text-white gap-10"
-            class:style={toggleMenu}
+            class="pt-2 h-auto md:flex list-none text-white gap-10"
+            style="transition:0.5s ease;"
         >
             <li><a href="/"> Home </a></li>
             <li><a href="/blogs"> Blogs </a></li>
@@ -40,7 +43,10 @@
                 <i class="absolute right-0">&#128269</i>
             </li>
         </ul>
-        <div id="sign" class="flex gap-10 h-2/4 text-white px-3">
+        <div
+            id="sign"
+            class="flex gap-10 h-2/4 pb-4 md:pd-0 justify-between text-white px-3"
+        >
             <div
                 class="bg-blue-800 my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
                 style="transition:0.3s ease;"
@@ -56,7 +62,7 @@
         </div>
     </div>
     <button
-        class="block md:hidden my-auto text-3xl text-white px-1"
+        class="block md:hidden my-auto text-3xl z-30 hover:scale-110 transition-all text-white px-1"
         on:click={() => toggle()}>☰</button
     >
 </main>
@@ -64,6 +70,18 @@
 <style>
     .toggle {
         display: block;
+        z-index: 10;
+        background: rgb(1, 1, 1);
+        width: 100vw;
+        margin: auto;
+        font-size: larger;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 2%;
+    }
+    .toggle li {
+        padding: 2rem;
     }
     a {
         text-decoration: none;
