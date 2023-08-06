@@ -1,5 +1,5 @@
 <script>
-    import { fade } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
 
     let imgs = [
         "fronx.png",
@@ -9,15 +9,9 @@
         "verna.png",
     ];
 
-    function delay(time) {
-        return new Promise((resolve) => {
-            setTimeout(resolve, time);
-        });
-    }
-
     let img_index = 0;
-    let style = ``;
-    setInterval(() => chngImg(true), 5000);
+
+    // setInterval(() => chngImg(true), 5000);
     async function chngImg(idx) {
         if (idx === true) {
             if (img_index >= imgs.length - 1) {
@@ -40,26 +34,37 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <button
-            class="bg-transparent border-0 text-6xl absolute top-[45%] left-2 hover:shadow-xl text-white text-center rounded-full"
+            class=" border-0 text-6xl absolute z-30 top-[45%] left-2 hover:shadow-xl text-black bg-[rgba(0,0,0,0.5)] text-center rounded-full"
             on:click={() => chngImg(false)}
         >
-            👈
+            {"<"}
         </button>
-        <img
-            transition:fade
-            src={`/img/${imgs[img_index]}`}
-            alt=""
-            srcset=""
-            class="w-full h-full"
-            {style}
-        />
+
+        <div class="flex overflow-visible relative">
+            {#each imgs as img, i}
+                {#if i === img_index}
+                    <img
+                        in:fly
+                        src={`/img/${img}`}
+                        alt=""
+                        srcset=""
+                        class="m-auto h-[90vh]"
+                    />
+                {/if}
+            {/each}
+        </div>
+
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <button
-            class=" bg-transparent border-0 text-6xl absolute top-[45%] right-2 hover:shadow-xl text-white text-center rounded-full"
-            on:click={() => chngImg(true)}
+            class=" bg-[rgba(0,0,0,0.5)] z-30 m-3 border-0 text-6xl absolute top-[45%] right-2 hover:shadow-xl text-black text-center rounded-full"
+            on:click={() => chngImg(true)}>{">"}</button
         >
-            👉
-        </button>
     </div>
 </main>
+
+<style>
+    .showImg {
+        display: block;
+    }
+</style>

@@ -2,8 +2,9 @@
     import { scale } from "svelte/transition";
     let toggleMenu = false;
 
+    /** Toggle function to toggle hamburger */
     function toggle() {
-        console.log(toggleMenu);
+        // console.log(toggleMenu);
         toggleMenu = !toggleMenu;
         return toggleMenu;
     }
