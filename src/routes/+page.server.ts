@@ -1,4 +1,5 @@
 import { getArticles } from "../lib/server/db.js"
+
 export const ssr = false
 export const load = async () => {
     let resp = await getArticles()

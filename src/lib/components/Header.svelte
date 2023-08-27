@@ -8,7 +8,6 @@
         toggleMenu = !toggleMenu;
         return toggleMenu;
     }
-    let style = `display:block`;
 </script>
 
 <main class="w-full flex h-20 bg-[rgb(43,43,43)] justify-between">
@@ -21,12 +20,12 @@
         style="transition:0.3s ease"
     />
     <div
-        class=" hidden md:flex grow justify-around my-auto md:h-1/2 sm:h-auto"
+        class=" hidden md:flex grow justify-around pt-0 my-auto md:h-1/2 sm:h-auto"
         class:toggle={toggleMenu}
     >
         <ul
             id="nav"
-            class="pt-2 h-auto md:flex list-none text-white gap-10"
+            class=" h-full md:flex list-none py-2 my-auto text-white gap-10"
             style="transition:0.5s ease;"
         >
             <li><a href="/"> Home </a></li>
@@ -46,16 +45,16 @@
         </ul>
         <div
             id="sign"
-            class="flex gap-10 h-2/4 pb-4 md:pd-0 justify-between text-white px-3"
+            class="flex gap-10 md:h-2/4 pd-0 justify-between text-white px-3"
         >
             <div
-                class="bg-blue-800 my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
+                class="bg-blue-800 md:my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
                 style="transition:0.3s ease;"
             >
                 Sign Up
             </div>
             <div
-                class="bg-green-800 my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
+                class="bg-green-800 md:my-auto px-4 py-2 rounded-lg hover:scale-105 cursor-pointer"
                 style="transition:0.3s ease;"
             >
                 Log In
@@ -74,12 +73,22 @@
         z-index: 10;
         background: rgb(1, 1, 1);
         width: 100vw;
-        margin: auto;
+        /* margin: auto; */
+        height: max-content;
         font-size: larger;
         position: absolute;
         left: 0;
         top: 0;
         border-radius: 2%;
+        animation: kk 0.3s ease;
+        padding: 10px;
+    }
+    @keyframes kk {
+        0% {
+            opacity: 0;
+
+            content: none;
+        }
     }
     .toggle li {
         padding: 2rem;

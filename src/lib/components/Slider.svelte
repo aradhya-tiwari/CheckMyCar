@@ -34,7 +34,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <button
-            class=" border-0 text-6xl absolute z-30 top-[45%] left-2 hover:shadow-xl text-black bg-[rgba(0,0,0,0.5)] text-center rounded-full"
+            class="text-white border-0 text-6xl absolute z-30 top-[45%] left-2 hover:shadow-xl bg-[rgba(0,0,0,0.5)] text-center rounded-lg"
             on:click={() => chngImg(false)}
         >
             {"<"}
@@ -57,7 +57,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <button
-            class=" bg-[rgba(0,0,0,0.5)] z-30 m-3 border-0 text-6xl absolute top-[45%] right-2 hover:shadow-xl text-black text-center rounded-full"
+            class=" bg-[rgba(0,0,0,0.5)] text-white z-30 m-3 border-0 text-6xl absolute top-[45%] right-2 hover:shadow-xl text-center rounded-lg"
             on:click={() => chngImg(true)}>{">"}</button
         >
     </div>

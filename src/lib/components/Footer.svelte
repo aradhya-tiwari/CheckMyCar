@@ -1,4 +1,8 @@
-<footer class="section bg-footer">
+<script>
+    import Chatgpt from "./Chatgpt.svelte";
+</script>
+
+<footer class="section bg-footer w-full relative overflow-hidden">
     <div class="container" style="padding-left: 3rem;">
         <div class="row">
             <div class="col-lg-3">
