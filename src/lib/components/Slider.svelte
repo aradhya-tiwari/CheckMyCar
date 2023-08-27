@@ -48,7 +48,7 @@
                         src={`/img/${img}`}
                         alt=""
                         srcset=""
-                        class="m-auto h-[90vh]"
+                        class="m-auto h-[60vh]"
                     />
                 {/if}
             {/each}

@@ -10,7 +10,7 @@
     }
 </script>
 
-<main class="w-full flex h-20 bg-[rgb(43,43,43)] justify-between">
+<main class="w-[100vw] flex h-20 bg-[rgb(43,43,43)] justify-between">
     <img
         transition:scale
         src="/img/logo.jpeg"
@@ -62,7 +62,7 @@
         </div>
     </div>
     <button
-        class="block md:hidden my-auto text-3xl z-30 hover:scale-110 transition-all text-white px-1"
+        class="block md:hidden my-auto mx-2 text-3xl z-30 hover:scale-110 transition-all bg-gray-500 text-white px-1"
         on:click={() => toggle()}>☰</button
     >
 </main>
